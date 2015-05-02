@@ -32,7 +32,7 @@ get_header(); ?>
 								<header class="entry-header">
 									<h1 class="page-title sanukot"><?php the_title(); ?></h1>
 								</header>
-								<div class="slogan">
+								<!--<div class="slogan">-->
 								<!--<div class="title-bar-green"><span class="leerzeichen sanukot">Titel Green</span></div>-->
 								<!--<div class="title-bar-magenta"><span class="leerzeichen sanukot">Titel Magenta</span></div></div>-->
 								<div class="entry-content">
