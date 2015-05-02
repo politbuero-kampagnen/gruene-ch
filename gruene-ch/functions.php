@@ -5,10 +5,10 @@ if ( !defined( 'ABSPATH' ) ) exit;
 // BEGIN ENQUEUE PARENT ACTION
 // AUTO GENERATED - Do not modify or remove comment markers above or below:
 
-        
+
 if ( !function_exists( 'chld_thm_cfg_parent_css' ) ):
     function chld_thm_cfg_parent_css() {
-        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css' ); 
+        wp_enqueue_style( 'chld_thm_cfg_parent', trailingslashit( get_template_directory_uri() ) . 'style.css' );
     }
 endif;
 add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css' );
@@ -21,7 +21,7 @@ add_action( 'wp_enqueue_scripts', 'chld_thm_cfg_parent_css' );
  * Include the TGM_Plugin_Activation class.
  */
 require_once dirname( __FILE__ ) . '/class-tgm-plugin-activation.php';
- 
+
 add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
 
 
@@ -38,13 +38,13 @@ add_action( 'tgmpa_register', 'my_theme_register_required_plugins' );
  * TGM_Plugin_Activation class constructor.
  */
 function my_theme_register_required_plugins() {
- 
+
     /**
      * Array of plugin arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
      */
     $plugins = array(
- 
+
         // This is an example of how to include a plugin pre-packaged with a theme.
 	 /**
         array(
@@ -58,16 +58,16 @@ function my_theme_register_required_plugins() {
             'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
         */
-        /**
+
         // This is an example of how to include a plugin from a private repo in your theme.
         array(
-            'name'               => 'TGM New Media Plugin', // The plugin name.
-            'slug'               => 'tgm-new-media-plugin', // The plugin slug (typically the folder name).
-            'source'             => 'https://s3.amazonaws.com/tgm/tgm-new-media-plugin.zip', // The plugin source.
+            'name'               => 'GitHub updater', // The plugin name.
+            'slug'               => 'github-updater', // The plugin slug (typically the folder name).
+            'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
-            'external_url'       => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
+            'external_url'       => 'https://github.com/afragen/github-updater', // If set, overrides default API URL and points to an external URL.
         ),
-        */
+
 
         // REQUIRED PLUGINS from the WordPress Plugin Repository.
         array(
@@ -101,9 +101,9 @@ function my_theme_register_required_plugins() {
         ),
 
 
- 
+
     );
- 
+
     /**
      * Array of configuration settings. Amend each line as needed.
      * If you want the default strings to be available under your own theme domain,
@@ -140,8 +140,7 @@ function my_theme_register_required_plugins() {
             'nag_type'                        => 'updated' // Determines admin notice type - can only be 'updated', 'update-nag' or 'error'.
         )
     );
- 
+
     tgmpa( $plugins, $config );
- 
+
 }
-   
