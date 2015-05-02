@@ -1,0 +1,258 @@
+/*
+ Theme Name: 	gruene-ch
+ Theme URI:   http://new.balthasar-glaettli.ch/
+ Description: Child Theme von Forefront im Erscheinungsbild der Gr�nen Schweiz
+ Template: 	Forefront
+ Author: 	Balthasar Glaettli 
+ Author URI:  http://www.politbuero-kampagnen.ch
+ Version: 	1.0.2
+ Updated: 	2015-05-01 17:30:49
+ License:     GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:        green, two-columns, responsive-layout, custom-menu, featured-images, full-width-template, theme-options
+*/
+
+@charset "UTF-8";
+
+
+
+
+
+/** vom individuellen CSS Konfigurator uebernommen **/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #84B414 -moz-radial-gradient(center,ellipse cover,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 100%);
+	background: #84B414 -webkit-gradient(radial,487px -262px,0px,487px -262px,929px,color-stop(0%,rgba(0,0,0,.25)),color-stop(100%,rgba(0,0,0,0)));
+	background: #84B414 -webkit-radial-gradient(487px -262px,929px 929px,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 100%);
+	background: #84B414 -o-radial-gradient(center,ellipse cover,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 100%);
+	background: #84B414 -ms-radial-gradient(center,ellipse cover,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 100%);
+	background: #84B414 radial-gradient(circle 929px at 487px -262px,rgba(0,0,0,.25) 0,rgba(0,0,0,0) 100%);
+	background-repeat: no-repeat;
+	overflow-x: hidden;
+}
+
+.site, site-header, header #masthead.site-header {
+	background-color: transparent;
+}
+
+@media screen and (min-width: 1230px) {
+	.site-header,.site-main,.site-footer {
+		padding-right: 15px;
+		padding-left: 15px;
+		background-color: transparent;
+	}
+}
+
+.site-main {
+	float: none;
+	padding: 10px;
+	margin: 0 0 10px;
+	width: auto;
+	background-color: #fff;
+	overflow: hidden;
+	-webkit-box-shadow: 0 0 10px 0 rgba(94,94,94,0.75);
+	box-shadow: 0 0 10px 0 rgba(94,94,94,0.75);
+	-webkit-border-radius: 1.2em;
+	border-radius: 1.2em;
+}
+
+.hero {
+	padding: 1.2em;
+}
+
+.hero > figure > img, .hero > img, .attachment-forefront-blog-thumbnail, .attachment-forefront-page-thumbnail, .attachment-forefront-grid-thumbnail {
+	border-radius: 1.2em;
+	margin: 0;
+}
+
+img.attachment-forefront-page-thumbnail {
+/* border: 1.2em; */
+}
+
+/* Hintere Seiten ohne Titel-Bildli schmaler grüner Streifen unter Titel */
+
+.hero.without-featured-image {
+  border-bottom: 5px solid #718F2A;
+}
+
+/* Schräge Balken */
+.slogan {
+	-ms-transform: rotate(-5deg);
+/* IE 9 */
+	-webkit-transform: rotate(-5deg);
+/* Chrome, Safari, Opera */
+	transform: rotate(-5deg);
+}
+
+span.leerzeichen::before {
+	content: "\00A0\00A0\00A0";
+	color: green;
+}
+
+.widget-title, .sidebar-widget-area .widgettitle, .sidebar-widget-area .widget-title {
+	padding: .1em;
+	color: white;
+	background-color: #84B414;
+	display: inline-block;
+}
+
+/* Zitate neu formatieren */
+.type-jetpack-testimonial .entry-content p {
+	font-size: 18px;
+	color: white;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.type-jetpack-testimonial {
+	background-color: #84B414;
+	border-radius: 1.2em;
+	position: relative;
+}
+
+.attachment-forefront-testimonial-thumbnail {
+	border-radius: .6em;
+}
+
+/*       MENU reposition */
+@media screen and (min-width: 930px) {
+	#site-navigation {
+		left: -10px;
+		position: relative;
+		top: 66px;
+	}
+}
+
+/*      SUB MENU    TODO: FIX MENU STRUCTURE    */
+#nav-global-box > ul > li > a,
+#nav-global-box > ul > li > strong {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: rgb(132,180,20,1);
+	background-color: white;
+	padding: 4px;
+	display: block;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+/* neuer schatten unten müsste noch hinzugefügt werden...*/
+}
+
+#nav-global-box > ul > li > a:hover,
+#nav-global-box > ul > li > strong,
+#nav-global-box > ul > li.on > a,
+#nav-global-box > ul > li.current-menu-item > a,
+#nav-global-box > ul > li.trail > a,
+#nav-global-box > ul > li:first-child > a {
+	background-color: rgb(226,0,122);
+	padding: 4px;
+	color: white;
+}
+
+#nav-global-box > ul > li > div {
+	top: 32px;
+	left: 0;
+	padding: 16px;
+	background-color: rgba(255,255,255,0.9);
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	border-top: 2px solid rgb(226,0,122);
+	max-height: 0;
+	overflow: hidden;
+	position: absolute;
+	height: 0;
+	-webkit-transition: max-height .8s;
+	-moz-transition: max-height .8s;
+	transition: max-height .8s;
+	display: none;
+}
+
+#nav-global-box > ul > li > div.submenu-visible {
+	display: block;
+	z-index: 111;
+	max-height: 700px;
+	height: auto;
+	width: 96.8%;
+	margin-bottom: 12px;
+	-webkit-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+
+#nav-global-box > ul > li > div.submenu-visible ul {
+	text-align: left;
+}
+
+#nav-global-box > ul > li > div > ul > li {
+	text-align: left;
+	width: 24%;
+	border-right: 1px solid #85ad62;
+	border-radius: 0;
+	margin-bottom: 10px;
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	float: none;
+}
+
+#nav-global-box > ul > li > div > ul > li:nth-child(4n), 
+#nav-global-box > ul > li > div > ul > li:last-child {
+	border-right: none;
+}
+
+#nav-global-box > ul > li > div > ul > li:nth-child(n+5) {
+	margin-bottom: 0;
+}
+
+#nav-global-box .sub-nav-box a,
+#nav-global-box .sub-nav-box strong {
+	display: block;
+	font-weight: bold;
+	line-height: 16px;
+	padding: 6px 3px;
+}
+
+#nav-global-box .sub-nav-box a:hover,
+#nav-global-box .sub-nav-box strong,
+#nav-global-box .sub-nav-box li.on > a,
+#nav-global-box .sub-nav-box li.trail > a {
+	text-decoration: underline;
+}
+
+#nav-global-box > ul > li > div > ul > li > a,
+#nav-global-box > ul > li > div > ul > li > strong {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#nav-global-box > ul > li > div > ul > li ul li {
+	display: block;
+	text-align: left;
+}
+
+#nav-global-box > ul > li > div.sub-nav-box > ul > li li a,
+#nav-global-box > ul > li > div.sub-nav-box > ul > li li strong {
+	font-weight: normal;
+	font-size: 13px;
+}
+
+/**** FONTS  ****/
+
+			@font-face {
+				font-family: 'SanukOT-Regular';
+				font-style: normal;
+				src: url('./fonts/150428043825SanukOT-Regular.eot');
+				src: local('SanukOT-Regular'), url('./fonts/150428043825SanukOT-Regular.eot') format('embedded-opentype'), url('./fonts/150428043825SanukOT-Regular.woff') format('woff');
+			}
+					@font-face {
+				font-family: 'SanukOT-Bold';
+				font-style: normal;
+				src: url('./fonts/150428043903SanukOT-Bold.eot');
+				src: local('SanukOT-Bold'), url('./fonts/150428043903SanukOT-Bold.eot') format('embedded-opentype'), url('./fonts/150428043903SanukOT-Bold.woff') format('woff');
+			}
+						body, p, blockquote, li, a{
+					font-family: 'SanukOT-Regular' !important;
+				}
+
+						h1, h2, h3, h4, h5, h6, h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a, li.menu-item > a, strong, b, .strong{
+					font-family: 'SanukOT-Bold' !important;
+				}
