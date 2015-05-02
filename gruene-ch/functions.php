@@ -45,30 +45,30 @@ function my_theme_register_required_plugins() {
      */
     $plugins = array(
 
-        // This is an example of how to include a plugin pre-packaged with a theme.
-	 /**
-        array(
-            'name'               => 'TGM Example Plugin', // The plugin name.
-            'slug'               => 'tgm-example-plugin', // The plugin slug (typically the folder name).
-            'source'             => get_stylesheet_directory() . '/lib/plugins/tgm-example-plugin.zip', // The plugin source.
+        // REQUIRED PLUGIN from Github to allow automatic Updates of the Theme itself, that is hosted on github
+	    array(
+            'name'               => 'GitHub updater', // The plugin name.
+            'slug'               => 'github-updater', // The plugin slug (typically the folder name).
+            'source'             => get_stylesheet_directory() . '/lib/plugins/github-updater.zip', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'version'            => '', // E.g. 1.0.0. If set, the active plugin must be this version or higher.
-            'force_activation'   => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
+            'force_activation'   => true, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch.
             'force_deactivation' => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins.
             'external_url'       => '', // If set, overrides default API URL and points to an external URL.
         ),
         */
 
-        // This is an example of how to include a plugin from a private repo in your theme.
+
+        /*
         array(
             'name'               => 'GitHub updater', // The plugin name.
             'slug'               => 'github-updater', // The plugin slug (typically the folder name).
-            'source'             => 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source.
+            'source'             => 'https://github.com/afragen/github-updater/zipball/master', // The plugin source.
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'external_url'       => 'https://github.com/afragen/github-updater', // If set, overrides default API URL and points to an external URL.
         ),
 
-
+		*/
         // REQUIRED PLUGINS from the WordPress Plugin Repository.
         array(
             'name'      => 'Wordpress Jetpack',
@@ -88,11 +88,13 @@ function my_theme_register_required_plugins() {
             'required'  => true,
         ),
 
+		/** No longer required as the necessary code has been included in the Child Theme
         array(
             'name'      => 'Use any font (Gr&uuml;ne Schrift verwenden)',
             'slug'      => 'use-any-font',
             'required'  => true,
-        ), /* Use Any Font API Key: 3NA6H7UFBZOGTS2D5BCLV4D150428113331  */
+        ), // Use Any Font API Key: 3NA6H7UFBZOGTS2D5BCLV4D150428113331
+        */
 
         array(
             'name'      => 'Social Media Sharing-Buttons (Sidebar)',
