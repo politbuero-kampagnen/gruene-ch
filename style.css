@@ -37,6 +37,10 @@ body {
 	background-color: transparent;
 }
 
+#masthead.site-header {
+	position: relative;
+}
+
 @media screen and (min-width: 1230px) {
 	.site-header,.site-main,.site-footer {
 		padding-right: 15px;
@@ -119,9 +123,9 @@ span.leerzeichen::before {
 /*       MENU reposition */
 @media screen and (min-width: 930px) {
 	#site-navigation {
-		left: -10px;
-		position: relative;
-		top: 66px;
+		position: absolute;
+		right: 20px;
+		bottom: 0px;
 	}
 }
 
