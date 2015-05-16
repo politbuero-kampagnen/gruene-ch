@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gruene-ch by politbuero-kampagnen</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gruene-ch</h1>
+        <p>Wordpress Theme im CI der Grünen Schweiz</p>
+
+        <p class="view"><a href="https://github.com/politbuero-kampagnen/gruene-ch">View the Project on GitHub <small>politbuero-kampagnen/gruene-ch</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/politbuero-kampagnen/gruene-ch/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/politbuero-kampagnen/gruene-ch/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/politbuero-kampagnen/gruene-ch">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>
+<a id="bedingungen" class="anchor" href="#bedingungen" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bedingungen</h3>
+
+<p>Die folgenden Themes dürfen von Mitgliedern der Grünen Schweiz kostenlos verwendet werden. Sie stehen unter GPL. D.h. dass allfällige Anpassungen ebenfalls frei verfügbar gemacht werden müssen. Das Logo der Grünen darf nur von Mitgliedern resp. Mitgliedsparteien der Grünen genutzt werden. <strong>Wichtig</strong>: Es wird keine Unterstützung bei der Installation, kein Support bei der Konfiguration des Themes oder ähnliches geleistet. Wer diese Dienstleistungen in Anspruch nehmen will, melde sich bei <a href="mailto:balthasar.glaettli@politbuero-kampagnen.ch">balthasar.glaettli@politbuero-kampagnen.ch</a> der Kontakte von Parteimitgliedern oder</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Die Themes sind <em>nicht</em> unter Wordpress.org verfügbar. Darum wird hier die Installation erklärt. Forefront (das Grundtheme von gruene-ch) muss zuerst mittels Rechtsklick-"Sichern unter..." auf den lokalen Computer heruntergeladen werden und dann in einer bestehenden Worpress Installation im Administrationsbereich hochgeladen werden unter <em>"Design &gt; Themes &gt; Installieren &gt; Theme hochladen"</em>. Nachdem das Eltern-Theme "Forefront" installiert wurde, muss das Plugin GitHub Updater installiert werden, nach dem gleichen Vorgehensmuster. Danach kann via GitHub Updater das auf Forefront aufbauende angepasste "Kind-Theme" gruene-ch installiert werden. Dieses wiederum zeigt dann innerhalb des Wordpress-Administrationsbereichs automatisch an, falls neue Versionen von gruene-ch existieren.</p>
+
+<ol>
+<li>Voraussetzung ist eine funktionierende Wordpress-Grund-Installation mit Administrationszugang</li>
+<li>Grundtheme Forefront auf den lokalen Computer herunterladen (<a href="http://www.politbuero-kampagnen.ch/wp-themes/Forefront.zip">hier mit Rechtsklick &gt; Sichern unter...</a>) und dann mit <em>"Design &gt; Themes &gt; Installieren &gt; Theme hochladen"</em> hochladen.</li>
+<li>GitHub Updater Plugin (<a href="http://www.politbuero-kampagnen.ch/wp-themes/github-updater.zip">hier mit Rechtsklick &gt; Sichern unter...</a>) auf den lokalen Computer herunterladen, im Wordpress durch Hochladen installieren, aktivieren</li>
+<li>Unter <em>"Einstellungen &gt; GitHub Updater"</em> den Tab "THEMES" anwählen und unter Motiv URI <code>politbuero-kampagnen/gruene-ch</code> angeben und unten "Theme installieren" klicken.</li>
+<li>Unter <em>"Design &gt; Themes"</em> klären ob das Theme aktiviert ist, gegebenenfalls aktivieren.</li>
+<li>Nun zeigt das Theme selbst an, ob es noch zusätzliche Plugins braucht, die noch nicht installiert sind, diese mit dem entsprechenden Link automatisch installieren.</li>
+<li>Das Jetpack Plugin benötigt für bestimmte Funktionen noch einen Gratis-Account bei Wordpress. Der Anleitung im Menu Jetpack folgen. Die notwendige Funktion für die Testimonials funktioniert aber auch ohne Account bei Wordpress.</li>
+</ol>
+
+<h1>
+<a id="konfiguration-des-themes" class="anchor" href="#konfiguration-des-themes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Konfiguration des Themes</h1>
+
+<p>BILD 03  (9) (8) (8) (7) (6) (6) (5) (5) (4) (3)(1)(2) </p>
+
+<p>
+
+</p><ol>
+<li>Das Menu kann definiert werden<br>
+Unter <code>Design &gt; Menus</code> kann ein Menu erstellt und dieses dann unter <code>Design &gt; Menus &gt; Positionen verwalten</code> der Position "Primary Menu" zugewiesen werden. Sinnvollerweise arbeitet man mit einer Menustruktur mit Haupt- und Untermenupunkten.
+</li>
+<li>Definieren der Homepage (Eingangsseite).<br>
+Um eine statische Homepage zu erstellen, muss zuerst unter <code>Seiten &gt; Erstellen</code> eine neue Seite erstellt werden. Diese möglichst Leer lassen, vielleicht mit einem Titel "Willkommen!" versehen. Ebenfalls für die Blogbeiträge (News) eine weitere Seite unter Seite &gt; Erstellen einrichten und mit "Blog" betiteln.<br>
+Unter <code>Design &gt; Anpassen &gt; Statische Startseite</code> die Option "Eine statische Seite" wählen und die beiden eben erzeugten Seiten der Startseite resp. der Beitragsseite zuweisen.
+</li>
+<li>Titelfoto, Titel definieren<br>
+Die Titelseite muss unter <code>Attribute &gt; Template</code> das Template "Front Page" zugewiesen erhalten. Die Titelfoto, der Titel und allenfalls ein Button werden definiert in der eben erzeugten Startseite. Als Titelfoto dient das Foto, das bei der Bearbeitung der Startseite rechts unten als Beitragsbild hinzugefügt wurde.
+Die Ecken werden automatisch gerundet. Als Titel erscheint der Titel der Startseite.
+</li>
+<li>Button definieren<br>
+Einen Button kann man hinzufügen, indem man einen entsprechenden Link in den Text der Startseite schreibt, z.B. so
+<pre><a href="http://new.balthasar-glaettli.ch/unterstuetzungskomitee/" target="_blank">Unterstütze die Kandidatur</a></pre>
+</li>
+<li>Frontpage Widgets erste Reihe<br>
+Unter dem Titelbild werden Frontpage Widgets angezeigt, diese unter <code>Design &gt; Widgets &gt; Frontpage Widget Area One</code> hinzufügen. Es können kein, ein, zwei oder auch drei Widgets hinzugefügt werden.
+</li>
+<li>Frontpage Widgets zweite Reihe<br>
+Eine zweite Reihe Frontpage Widgets können unter <code>Design &gt; Widgets &gt; Frontpage Widget Area Two</code> hinzugefügt werden. Es können kein, ein, zwei oder auch drei Widgets hinzugefügt werden.
+</li>
+<li>Testimonials (Referenzen)<br>
+Damit die Testimonials funktionieren, muss das Jetpack Plugin installiert sein. Das Theme melde einen Fehler, falls das Plugin nicht installiert ist. Wenn das Plugin installiert ist, dann erscheint unter den Menus Beiträge, Medien, Seiten das neue Menu Referenzen.<br>
+Dann kann man einzelne Referenzen (Testimonials) im Menu Referenzen hinzufügen. Falls mehr als zwei Referenzen eingegeben werden, werden diese zufällig auf der Homepage angezeigt. Das Bild zum Testimonial ist in der einzelnen Referenz als Beitragsbild (rechts unten) hinzuzufügen
+</li>
+<li>Fusszeile (Footer Widget Area)<br>
+Die Fusszeilen definiert man im Menu <code>Design &gt; Widgets &gt; Footer Widget Area</code> mit Widgets
+</li>
+</ol>
+
+
+<h2>
+<a id="grundsatzinfo-zu-eltern-theme-forefront" class="anchor" href="#grundsatzinfo-zu-eltern-theme-forefront" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grundsatzinfo zu Eltern Theme Forefront</h2>
+
+<h3>
+<a id="-how-to-setup-the-front-page-like-the-demo-site-" class="anchor" href="#-how-to-setup-the-front-page-like-the-demo-site-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= How to setup the front page like the demo site? =</h3>
+
+<p>The demo site URL: http://forefrontdemo.wordpress.com/?demo
+</p>
+
+<ol>
+<li>Create or edit a page, and assign it to the Front Page template from the Page Attributes module: https://cloudup.com/cCO6975qFO5</li>
+<li>Go to Settings Reading and set "Front page displays" to "A static page".</li>
+<li>Select the page you just assigned the Front Page template to as "Front page" and then choose another page as "Posts page" to serve your blog posts.</li>
+<li>Make sure you add a featured image to your front page. This image will be shown in the large hero area below the top menu.</li>
+</ol>
+
+<p>
+The front page also can display widgets and two testimonials. The page has two dedicated widget areas, Front Page Widget Area One and Front Page Widget Area Two. You can add as many as widgets you want!</p>
+
+<p>Below the widget areas, two randomly chosen testimonials (see below) will be displayed. All you need to do is add at least two testimonials, and you're all set.</p>
+
+<p>Forefront makes easy to add buttons without learning CSS, you just need to add a class, "button" to your link when you are editing in Text (HTML) view. The class makes a link look this:https://cloudup.com/cyVu7ymhmfV</p>
+
+<p>If you like more minimal style, use "button-minimal" class instead. It makes a link look this:https://cloudup.com/cKgOahbNyM3</p>
+
+<h3>
+<a id="-how-to-use-the-grid-page-template-" class="anchor" href="#-how-to-use-the-grid-page-template-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= How to use the grid page template? =</h3>
+
+<p>Another useful page template is the grid template. It's great for a portfolio page, a case study page, or a page to introduce your team members.</p>
+
+<ol>
+<li>Create or edit a page, and assign it to the Grid Page template from the Page Attributes module.https://cloudup.com/cl0QFolBf7j  This placeholder page will be used to display a small blurb and thumbnail image for each of the child pages (aka sub-pages) you'll create next.</li>
+<li>Create additional pages that you want to show on the grid page you've just created above. In the Page Attributes box on each child page, select the grid page you created above as the parent page.https://cloudup.com/cJvJfoWd1xN</li>
+<li>For the best result, make sure you add a featured images to each child page, so it'll be displayed above the blurb on the main grid page. https://cloudup.com/cxI8Glh0BAa</li>
+</ol>
+
+<h3>
+<a id="-i-dont-see-the-testimonials-menu-in-my-admin-where-can-i-find-it-" class="anchor" href="#-i-dont-see-the-testimonials-menu-in-my-admin-where-can-i-find-it-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= I don't see the Testimonials menu in my admin, where can I find it? =</h3>
+
+<p>To make the Testimonials menu appear in your admin, you need to install the Jetpack plugin (http://jetpack.me) because it has the required code needed to make custom post types (http://codex.wordpress.org/Post_Types#Custom_Post_Types) work for the Forefront theme.</p>
+
+<p>Once Jetpack is active, the Testimonials menu will appear in your admin, in addition to standard blog posts. No special Jetpack module is needed and a WordPress.com connection is not required for the Testimonials feature to function. Testimonials will work on a localhost installation of WordPress if you add this line to wp-config.php</p>
+
+<p><code>define( 'JETPACK_DEV_DEBUG', TRUE );</code></p>
+
+<p>The Testimonials admin: https://cloudup.com/c3Q7tbPQQR2</p>
+
+<p>On your site, two randomly chosen testimonials appear on the front page template so that every testimonial has an equal chance to be there. All testimonials are displayed in a testimonial archive page.</p>
+
+<h3>
+<a id="-where-is-the-page-that-lists-all-testimonials-" class="anchor" href="#-where-is-the-page-that-lists-all-testimonials-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= Where is the page that lists all testimonials? =</h3>
+
+<p>Let's say you have a site at: http://mygroovydomain.com</p>
+
+<p>The URL of the testimonial archive page will be: http://mygroovydomain.com/testimonial/</p>
+
+<p>You'll need pretty permalinks (any structure) for this URL to work though. If you're stuck with default permalinks - your links have a query string at the end, like ?p=123 - then your testimonial archive can be accessed by adding this immediately after your URL:</p>
+
+<p><code>/?post_type=jetpack-testimonial</code></p>
+
+<p>The testimonial archive page: https://cloudup.com/cjfTZ6j3zZ3</p>
+
+<h3>
+<a id="-how-to-customize-the-testimonial-archive-page-" class="anchor" href="#-how-to-customize-the-testimonial-archive-page-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= How to customize the testimonial archive page? =</h3>
+
+<p>Once you have published a testimonial, under the Testimonials menu in your admin, you will see a link that takes you to the Customizer where you can edit the page title, add an intro text and a featured image. Just make sure you have pretty permalinks (any structure) for this to work.</p>
+
+<p>Customizing the testimonial page: https://cloudup.com/cBy4RuWyees</p>
+
+<h3>
+<a id="-how-to-add-the-social-links-in-the-footer-" class="anchor" href="#-how-to-add-the-social-links-in-the-footer-" aria-hidden="true"><span class="octicon octicon-link"></span></a>= How to add the social links in the footer? =</h3>
+
+<ol>
+<li>Make sure you install Jetpack (http://jetpack.me) and activate the plugin, and connect it to your WordPress.com account.</li>
+<li>In the Jetpack dashboard, activate the Publicize module.</li>
+<li>Under Settings Sharing, connect to your preferred social network(s).</li>
+<li>Under Appearance Customize, in the Connect panel, select the appropriate social-media accounts and save your settings.</li>
+<li>The social-media icons for the accounts you've selected should now appear in your footer.</li>
+</ol>
+
+<p>Connect setting in the Customizer: https://cloudup.com/cokKpvFVQO8</p>
+
+<h3>
+<a id="-quick-forefront-specs-all-measurements-in-pixels-" class="anchor" href="#-quick-forefront-specs-all-measurements-in-pixels-" aria-hidden="true"><span class="octicon octicon-link"></span></a>== Quick Forefront Specs (all measurements in pixels) ==</h3>
+
+<ol>
+<li>On single posts and the default page template the main column maximum width is 600.</li>
+<li>On the full width page template the main column maximum width is 1050.</li>
+<li>The featured image works best with images at least 1230 wide for pages, 810 for posts.</li>
+<li>The primary sidebar maximum width is 270.</li>
+<li>The maximum width for a custom header image is 330.</li>
+</ol>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/politbuero-kampagnen">politbuero-kampagnen</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
